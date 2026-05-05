@@ -8,13 +8,9 @@ export const metadata: Metadata = {
   description: 'Солонгосоос Монгол руу найдвартай, хурдан тээвэр',
 };
 
-export default async function LocaleLayout({
-  children,
-  params,
-}: {
-  children: React.ReactNode;
-  params: Promise<{ locale: string }>;
-}) {
+type Props = { children: React.ReactNode; params: Promise<{ locale: string }> };
+
+export default async function LocaleLayout({ children, params }: Props) {
   const { locale } = await params;
   const messages = await getMessages();
   return (
@@ -24,11 +20,9 @@ export default async function LocaleLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
       </head>
-      <body style={{margin:0}}>
+      <body style={{ margin: 0 }}>
         <NextIntlClientProvider messages={messages}>
-          <AppThemeProvider>
-            {children}
-          </AppThemeProvider>
+          <AppThemeProvider>{children}</AppThemeProvider>
         </NextIntlClientProvider>
       </body>
     </html>

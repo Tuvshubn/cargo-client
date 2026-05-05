@@ -75,7 +75,7 @@ export default function TrackPage() {
     <Box sx={{ minHeight: '100vh', bgcolor: 'background.default' }}>
       <Navbar />
       <Container maxWidth="md" sx={{ pt: 14, pb: 8 }}>
-        <Box textAlign="center" mb={5}>
+        <Box mb={5}>
           <Avatar sx={{ bgcolor: 'primary.main', mx: 'auto', mb: 2, width: 64, height: 64 }}>
             <LocalShipping sx={{ fontSize: 36 }} />
           </Avatar>
