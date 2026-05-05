@@ -75,7 +75,7 @@ export default function TrackPage() {
     <Box sx={{ minHeight: '100vh', bgcolor: 'background.default' }}>
       <Navbar />
       <Container maxWidth="md" sx={{ pt: 14, pb: 8 }}>
-        <Box mb={5}>
+        <Box sx={{ mb: 5 }}>
           <Avatar sx={{ bgcolor: 'primary.main', mx: 'auto', mb: 2, width: 64, height: 64 }}>
             <LocalShipping sx={{ fontSize: 36 }} />
           </Avatar>
@@ -214,7 +214,7 @@ export default function TrackPage() {
 
                 {/* History */}
                 {result.history?.length > 0 && (
-                  <Box mt={3}>
+                  <Box sx={{ mt: 3 }}>
                     <Typography variant="subtitle2" fontWeight={700} gutterBottom>{t('history')}</Typography>
                     <Stack spacing={1}>
                       {result.history.filter((h: any) => result.parcels.some((p:any) => p.id === h.parcel_id || true)).slice(0, 8).map((h: any, i: number) => (

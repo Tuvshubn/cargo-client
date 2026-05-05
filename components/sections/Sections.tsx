@@ -20,7 +20,7 @@ export function ServicesSection() {
   return (
     <Box id="services" sx={{ py: 10, bgcolor: 'background.default' }}>
       <Container maxWidth="lg">
-        <Box mb={6}>
+        <Box sx={{ mb: 6 }}>
           <Chip label="Services" sx={{ mb: 2, fontWeight: 700 }} />
           <Typography variant="h3" fontWeight={800} gutterBottom>{t('title')}</Typography>
         </Box>
@@ -93,7 +93,7 @@ export function RepsSection() {
   return (
     <Box id="reps" sx={{ py: 10, bgcolor: 'background.default' }}>
       <Container maxWidth="lg">
-        <Box mb={6}>
+        <Box sx={{ mb: 6 }}>
           <Chip label="Representatives" sx={{ mb: 2, fontWeight: 700 }} />
           <Typography variant="h3" fontWeight={800}>{t('title')}</Typography>
         </Box>
@@ -138,7 +138,7 @@ export function ContactSection() {
   return (
     <Box id="contact" sx={{ py: 10, bgcolor: 'background.paper' }}>
       <Container maxWidth="lg">
-        <Box mb={6}>
+        <Box sx={{ mb: 6 }}>
           <Chip label="Contact" sx={{ mb: 2, fontWeight: 700 }} />
           <Typography variant="h3" fontWeight={800}>{t('title')}</Typography>
         </Box>
@@ -199,7 +199,7 @@ export function RulesSection() {
   return (
     <Box id="rules" sx={{ py: 10, bgcolor: 'background.default' }}>
       <Container maxWidth="md">
-        <Box mb={6}>
+        <Box sx={{ mb: 6 }}>
           <Chip label="Rules" color="warning" sx={{ mb: 2, fontWeight: 700 }} />
           <Typography variant="h3" fontWeight={800}>{t('title')}</Typography>
         </Box>
